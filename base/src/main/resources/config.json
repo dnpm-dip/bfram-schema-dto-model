@@ -1,0 +1,84 @@
+{ 
+  "dataNodeIds": {
+    "MTB": "KDKTUE005",
+    "RD": "KDKTUE002"
+  },
+  "sites": {
+    "Charité": {
+      "submitterId": "261101015", "gdcId": "GRZB00007"
+    },
+    "KUM": {
+      "submitterId": "260914050", "gdcId": "GRZM00006"
+    },
+    "MHH": {
+      "submitterId": "260320597", "gdcId": "GRZDD0004"
+    },
+    "MRI": {
+      "submitterId": "260913195", "gdcId": "GRZM00006"
+    },
+    "UM": {
+      "submitterId": "260730161", "gdcId": "GRZHD0003"
+    },
+    "UME": {
+      "submitterId": "260510381", "gdcId": "GRZK00001"
+    },
+    "UMG": {
+      "submitterId": "260310378", "gdcId": "GRZTUE002"
+    },
+    "UKA": {
+      "submitterId": "260530012", "gdcId": "GRZK00001"
+    },
+    "UKB": {
+      "submitterId": "260530103", "gdcId": "GRZK00001"
+    },
+    "UKD": {
+      "submitterId": "260510018", "gdcId": "GRZK00001"
+    },
+    "UKDD": {
+      "submitterId": "261401030", "gdcId": "GRZDD0004"
+    },
+    "UKE": {
+      "submitterId": "260200013", "gdcId": "GRZTUE002"
+    },
+    "UKER": {
+      "submitterId": "260950567", "gdcId": "GRZM00006"
+    },
+    "UKFR": {
+      "submitterId": "260832299", "gdcId": "GRZTUE002"
+    },
+    "UKHD": {
+      "submitterId": "260820466", "gdcId": "GRZHD0003"
+    },
+    "UKJ": {
+      "submitterId": "261600736", "gdcId": "GRZDD0004"
+    },
+    "UKK": {
+      "submitterId": "260530283", "gdcId": "GRZK00001"
+    },
+    "UKL": {
+      "submitterId": "261401052", "gdcId": "GRZDD0004"
+    },
+    "UKM": {
+      "submitterId": "260550131", "gdcId": "GRZK00001"
+    },
+    "UKMR": {
+      "submitterId": "260620431", "gdcId": "GRZK00001"
+    },
+    "UKR": {
+      "submitterId": "260930608", "gdcId": "GRZM00006"
+    },
+    "UKSH": {
+      "submitterId": "260102343", "gdcId": "GRZB00007"
+    },
+    "UKT": {
+      "submitterId": "260840108", "gdcId": "GRZTUE002"
+    },
+    "UKU": {
+      "submitterId": "260840200", "gdcId": "GRZHD0003"
+    },
+    "UKW": {
+      "submitterId": "260960079", "gdcId": "GRZM00006"
+    }
+  }
+
+}
