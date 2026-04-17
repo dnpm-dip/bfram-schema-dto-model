@@ -32,7 +32,7 @@ import play.api.libs.json.{
 
 final case class RDPlan
 (
-  carePlanOd: Option[RDPlan.CarePlan],
+  carePlanRd: RDPlan.CarePlan,
   recommendedStudies: Option[List[RDPlan.StudyRecommendation]],
   recommendedTherapies: Option[List[RDPlan.TherapyRecommendation]]
 )

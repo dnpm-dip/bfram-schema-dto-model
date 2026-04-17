@@ -119,7 +119,7 @@ lazy val dependencies =
     val atc_impl       = "de.dnpm.dip"   %% "atc-impl"              % "1.1.0" % Test
     val atc_catalogs   = "de.dnpm.dip"   %% "atc-catalogs-packaged" % "1.1.0" % Test
     val hgnc_geneset   = "de.dnpm.dip"   %% "hgnc-gene-set-impl"    % "1.1.1" % Test
-    val hpo            = "de.dnpm.dip"   %% "hp-ontology"           % "1.1.2" % Test
+    val hpo            = "de.dnpm.dip"   %% "hp-ontology"           % "1.1.2"
     val alpha_id_se    = "de.dnpm.dip"   %% "alpha-id-se"           % "1.1.2" % Test
     val orphanet       = "de.dnpm.dip"   %% "orphanet-ordo"         % "1.1.2" % Test
   }

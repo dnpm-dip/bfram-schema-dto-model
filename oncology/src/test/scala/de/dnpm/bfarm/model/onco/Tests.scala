@@ -30,6 +30,20 @@ with BaseCompleters
 
     noException must be thrownBy records.map(_.mapTo[OncologySubmission])
 
+/*
+    import play.api.libs.json.Json
+
+    val dir = new java.io.File("/home/lucien/Downloads/mv_dummy_data/onco")
+    dir.mkdirs
+
+    noException must be thrownBy records.map(_.mapTo[OncologySubmission]).tapEach {
+        submission =>
+          val file = new java.io.File(dir,s"OncoSubmission_${submission.metaData.tanC}.json")
+          scala.util.Using.resource(new java.io.FileWriter(file)){
+            _.write(Json.prettyPrint(Json.toJson(submission)))
+          }
+      }
+*/      
   }
 
 }

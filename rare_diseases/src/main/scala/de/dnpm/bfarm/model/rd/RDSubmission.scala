@@ -12,7 +12,7 @@ import play.api.libs.json.{
 
 final case class RDSubmission
 (
-  metadata: Metadata,
+  metaData: Metadata,
   `case`: RDCase,
   molecular: Option[RDMolecular],
   plan: Option[RDPlan],

@@ -18,9 +18,11 @@ import de.dnpm.dip.rd.model.{
 }
 import play.api.libs.json.{
   Json,
+  JsPath,
   Format,
   OFormat,
 }
+import play.api.libs.functional.syntax._
 
 
 /*
@@ -67,8 +69,16 @@ object RDFollowUp
     implicit val formatValue: Format[Value] =
       Json.formatEnum(this)
 
+
     implicit val format: OFormat[PhenotypeChange] =
-      Json.format[PhenotypeChange]
+      (
+        JsPath.format[Coding[HPO]] and
+        (JsPath \ "change").format[PhenotypeChange.Value]
+      )(
+        PhenotypeChange(_,_),
+        unlift(PhenotypeChange.unapply _),
+      )
+
   }
 
   implicit val format: OFormat[RDFollowUp] =
@@ -78,7 +88,7 @@ object RDFollowUp
 
 final case class RDFollowUps
 (
-  followUpOds: NonEmptyList[RDFollowUp]
+  followUpRds: NonEmptyList[RDFollowUp]
 )
 
 object RDFollowUps

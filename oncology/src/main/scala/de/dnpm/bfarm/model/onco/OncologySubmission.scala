@@ -12,7 +12,7 @@ import play.api.libs.json.{
 
 final case class OncologySubmission
 (
-  metadata: Metadata,
+  metaData: Metadata,
   `case`: OncologyCase,
   molecular: Option[OncologyMolecular],
   plan: Option[OncologyPlan],

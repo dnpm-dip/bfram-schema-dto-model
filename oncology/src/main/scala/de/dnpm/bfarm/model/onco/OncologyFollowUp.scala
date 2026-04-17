@@ -11,7 +11,10 @@ import de.dnpm.dip.util.json.{
 }
 import de.dnpm.bfarm.model.base.VitalStatus
 import de.dnpm.dip.model.Id
-import de.dnpm.dip.mtb.model.ECOG
+import de.dnpm.dip.mtb.model.{
+  ECOG,
+  MTBMedicationRecommendation
+}
 import play.api.libs.json.{
   Json,
   Format,
@@ -45,7 +48,8 @@ object FollowUp
 
   final case class Therapy
   (
-    identifier: Id[Therapy],
+    reference: Id[MTBMedicationRecommendation],
+//    identifier: Id[Therapy],
     therapyStartDate: LocalDate,
     therapyEndDate: Option[LocalDate],
     terminationReasonOBDS: Option[TerminationReason.Value],

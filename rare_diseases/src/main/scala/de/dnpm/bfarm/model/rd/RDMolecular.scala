@@ -52,7 +52,7 @@ object RDMolecular
 
   sealed abstract class Variant
   {
-    val id: Id[Variant]
+    val identifier: Id[Variant]
     val genes: Option[Set[Coding[HGNC]]]
     val localization: Option[Set[Coding[Variant.Localization.Value]]]
     val cdnaChange: Option[Code[HGVS.DNA]]
@@ -146,7 +146,7 @@ object RDMolecular
 
   final case class SmallVariant
   (
-    id: Id[SmallVariant],
+    identifier: Id[SmallVariant],
     genes: Option[Set[Coding[HGNC]]],
     chromosome: Chromosome.Value,
     startPosition: Int,
@@ -171,7 +171,7 @@ object RDMolecular
 
   final case class StructuralVariant
   (
-    id: Id[SmallVariant],
+    identifier: Id[SmallVariant],
     genes: Option[Set[Coding[HGNC]]],
     localization: Option[Set[Coding[Variant.Localization.Value]]],
     cdnaChange: Option[Code[HGVS.DNA]],
@@ -192,7 +192,7 @@ object RDMolecular
 
   final case class CopyNumberVariant
   (
-    id: Id[SmallVariant],
+    identifier: Id[SmallVariant],
     genes: Option[Set[Coding[HGNC]]],
     chromosome: Chromosome.Value,
     startPosition: Int,
