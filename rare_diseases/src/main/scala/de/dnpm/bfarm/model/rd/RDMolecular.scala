@@ -171,7 +171,7 @@ object RDMolecular
 
   final case class StructuralVariant
   (
-    identifier: Id[SmallVariant],
+    identifier: Id[StructuralVariant],
     genes: Option[Set[Coding[HGNC]]],
     localization: Option[Set[Coding[Variant.Localization.Value]]],
     cdnaChange: Option[Code[HGVS.DNA]],
@@ -192,7 +192,7 @@ object RDMolecular
 
   final case class CopyNumberVariant
   (
-    identifier: Id[SmallVariant],
+    identifier: Id[CopyNumberVariant],
     genes: Option[Set[Coding[HGNC]]],
     chromosome: Chromosome.Value,
     startPosition: Int,
