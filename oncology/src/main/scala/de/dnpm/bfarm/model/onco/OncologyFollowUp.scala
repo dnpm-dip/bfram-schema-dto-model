@@ -49,7 +49,6 @@ object FollowUp
   final case class Therapy
   (
     reference: Id[MTBMedicationRecommendation],
-//    identifier: Id[Therapy],
     therapyStartDate: LocalDate,
     therapyEndDate: Option[LocalDate],
     terminationReasonOBDS: Option[TerminationReason.Value],
