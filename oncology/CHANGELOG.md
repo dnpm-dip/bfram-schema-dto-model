@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/dnpm-dip/bfarm-schema-dto-model/compare/dnpm-bfarm-model-oncology-v1.0.0...dnpm-bfarm-model-oncology-v1.0.1) (2026-04-28)
+
+
+### Bug Fixes
+
+* Corrected unmoored doc comment to plain in-line comment ([1933a4a](https://github.com/dnpm-dip/bfarm-schema-dto-model/commit/1933a4a17803f25b24f5cbebe42ce33b90b2025d))
+
 ## 1.0.0 (2026-04-28)
 
 
