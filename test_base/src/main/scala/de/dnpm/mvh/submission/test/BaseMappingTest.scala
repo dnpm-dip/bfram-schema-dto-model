@@ -50,25 +50,15 @@ with SubmissionGenerators[T]
       .getInstance(SpecVersion.VersionFlag.V202012)
       .getSchema(SchemaLocation.of(schemaURL))
 
-  protected val submissions = List.fill(42)(Gen.of[Submission[T]].next)
 
+  protected val submissions: Seq[Submission[T]] =
+    List.fill(42)(Gen.of[Submission[T]].next)
 
-//  val dir = new java.io.File(s"/home/lucien/Downloads/mv_dummy_data/${useCase.replace(" ","").toLowerCase}")
-//  dir.mkdirs
 
   s"$useCase Mappings" must "have worked and produced schema-conformant JSON output" in {
 
     forAll(
       submissions.map(mapping)
-/*
-         .tapEach {
-           submission =>
-             val file = new java.io.File(dir,s"${useCase.replace(" ","")}Submission_${submission.metaData.tanC}.json")
-             scala.util.Using.resource(new java.io.FileWriter(file)){
-               _.write(Json.prettyPrint(Json.toJson(submission)))
-             }
-         }
-*/         
         .map(Json.toJson(_))
         .map(Json.stringify)
     ){ 
