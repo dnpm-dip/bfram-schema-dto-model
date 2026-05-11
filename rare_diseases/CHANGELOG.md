@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/dnpm-dip/bfarm-schema-dto-model/compare/dnpm-bfarm-model-rare-disease-v1.0.0...dnpm-bfarm-model-rare-disease-v1.0.1) (2026-05-11)
+
+
+### Bug Fixes
+
+* Bump service-base to 1.3.1, and code-system dependencies for tests ([#4](https://github.com/dnpm-dip/bfarm-schema-dto-model/issues/4)) ([ec88599](https://github.com/dnpm-dip/bfarm-schema-dto-model/commit/ec88599d976306ea1aa171c8db143ec9654a18bd))
+
 ## 1.0.0 (2026-04-28)
 
 
