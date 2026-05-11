@@ -72,7 +72,7 @@ trait RDMappings extends Mappings[RDPatientRecord,RDSubmission]
         record.diagnoses.toList.flatMap(_.onsetDate).minOption
           .orElse(record.hpoTerms.toList.flatMap(_.onsetDate).minOption)
           .getOrElse(YearMonth.of(1800,JANUARY)),
-        record.mvhCarePlan.get.issuedOn,
+        record.indicationCarePlan.get.issuedOn,
         record.diagnoses
           .toList
           .flatMap(_.familyControlLevel.map(_.code.enumValue))

@@ -117,7 +117,7 @@ trait Mappings[RecordType <: PatientRecord,UseCaseSubmission <: de.dnpm.bfarm.mo
 */
 
 
-    val mvhCarePlan = record.mvhCarePlan.get  // .get safe here, because validation ensures non-empty careplan list for MVH submissions 
+    val indicationCarePlan = record.indicationCarePlan.get  // .get safe here, because validation ensures non-empty careplan list for MVH submissions 
 
     val site = record.patient.managingSite.getOrElse(Site.local).code
 
@@ -164,9 +164,9 @@ trait Mappings[RecordType <: PatientRecord,UseCaseSubmission <: de.dnpm.bfarm.mo
       record.patient.gender.code,
       YearMonth.from(record.patient.birthDate),
       record.patient.address.map(_.municipalityCode.value).getOrElse(""),
-      mvhCarePlan.noSequencingPerformedReason.isEmpty,
-      mvhCarePlan.issuedOn,
-      mvhCarePlan.noSequencingPerformedReason.map(_.code.enumValue.mapTo[RejectionJustification.Value]),
+      indicationCarePlan.noSequencingPerformedReason.isEmpty,
+      indicationCarePlan.issuedOn,
+      indicationCarePlan.noSequencingPerformedReason.map(_.code.enumValue.mapTo[RejectionJustification.Value]),
     )
   }
 

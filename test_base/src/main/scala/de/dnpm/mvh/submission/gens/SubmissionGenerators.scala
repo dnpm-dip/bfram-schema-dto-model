@@ -53,9 +53,10 @@ trait SubmissionGenerators[T <: PatientRecord]
 
       metadata =
         Submission.Metadata(
-          Submission.Type.Test,
-          Id[TransferTAN](ttan),
-          ModelProjectConsent(
+          `type` = Submission.Type.Test,
+          transferTAN = Id[TransferTAN](ttan),
+          episodeOfCare = None,
+          modelProjectConsent = ModelProjectConsent(
             "Patient Info TE Consent MVGenomSeq vers01",
             Some(consentDate minusDays 1),
             ModelProjectConsent.Purpose.values
@@ -68,8 +69,8 @@ trait SubmissionGenerators[T <: PatientRecord]
                 )
               )
           ),
-          bc,
-          reasonConsentMissing
+          researchConsents = bc,
+          reasonResearchConsentMissing = reasonConsentMissing
         )
 
     } yield Submission(

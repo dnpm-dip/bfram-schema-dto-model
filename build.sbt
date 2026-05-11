@@ -5,7 +5,7 @@ name := "dnpm-bfarm-model"  // Central Clinical Data Node
 ThisBuild / organization := "de.dnpm"
 ThisBuild / scalaVersion := "2.13.18"
 
-val ownerRepo  = envOrElse("REPOSITORY","dnpm-dip/bfram-schema-dto-model").split("/")
+val ownerRepo  = envOrElse("REPOSITORY","dnpm-dip/bfarm-schema-dto-model").split("/")
 ThisBuild / githubOwner      := ownerRepo(0)
 ThisBuild / githubRepository := ownerRepo(1)
 
@@ -31,7 +31,7 @@ lazy val global = project
 lazy val base = project
   .settings(
     name := "dnpm-bfarm-model-base",
-    version := envOrElse("BASE_MODEL_VERSION","1.0.0-SNAPSHOT"),
+    version := envOrElse("BASE_MODEL_VERSION","1.0.0"),
     settings,
     libraryDependencies ++= Seq(
       dependencies.scalatest,
@@ -57,7 +57,7 @@ lazy val test_base = project
 lazy val oncology = project
   .settings(
     name := "dnpm-bfarm-model-oncology",
-    version := envOrElse("ONCOLOGY_MODEL_VERSION","1.0.0-SNAPSHOT"),
+    version := envOrElse("ONCOLOGY_MODEL_VERSION","1.0.0"),
     settings,
     libraryDependencies ++= Seq(
       dependencies.mtb_dtos,
@@ -78,7 +78,7 @@ lazy val oncology = project
 lazy val rare_diseases = project
   .settings(
     name := "dnpm-bfarm-model-rare-disease",
-    version := envOrElse("RD_MODEL_VERSION","1.0.0-SNAPSHOT"),
+    version := envOrElse("RD_MODEL_VERSION","1.0.0"),
     settings,
     libraryDependencies ++= Seq(
       dependencies.rd_dtos,
@@ -108,18 +108,18 @@ lazy val dependencies =
   new {
     val scalatest             = "org.scalatest" %% "scalatest"             % "3.2.18"
     val json_schema_validator = "com.networknt" %  "json-schema-validator" % "1.5.9"
-    val service_base          = "de.dnpm.dip"   %% "service-base"          % "1.2.0"
-    val mtb_dtos              = "de.dnpm.dip"   %% "mtb-dto-model"         % "1.2.0"
+    val service_base          = "de.dnpm.dip"   %% "service-base"          % "1.3.1"
+    val mtb_dtos              = "de.dnpm.dip"   %% "mtb-dto-model"         % "1.2.1"
     val rd_dtos               = "de.dnpm.dip"   %% "rd-dto-model"          % "1.2.0"
     val generators            = "de.ekut.tbi"   %% "generators"            % "1.0.0"
-    val mtb_generators        = "de.dnpm.dip"   %% "mtb-dto-generators"    % "1.2.0" % Test
+    val mtb_generators        = "de.dnpm.dip"   %% "mtb-dto-generators"    % "1.2.1" % Test
     val rd_generators         = "de.dnpm.dip"   %% "rd-dto-generators"     % "1.2.0" % Test
-    val icd10gm               = "de.dnpm.dip"   %% "icd10gm-impl"          % "1.1.2" % Test
-    val icdo3                 = "de.dnpm.dip"   %% "icdo3-impl"            % "1.1.2" % Test
-    val icd_catalogs          = "de.dnpm.dip"   %% "icd-claml-packaged"    % "1.1.2" % Test
-    val atc_impl              = "de.dnpm.dip"   %% "atc-impl"              % "1.1.0" % Test
-    val atc_catalogs          = "de.dnpm.dip"   %% "atc-catalogs-packaged" % "1.1.0" % Test
-    val hgnc_geneset          = "de.dnpm.dip"   %% "hgnc-gene-set-impl"    % "1.1.1" % Test
+    val icd10gm               = "de.dnpm.dip"   %% "icd10gm-impl"          % "1.1.3" % Test
+    val icdo3                 = "de.dnpm.dip"   %% "icdo3-impl"            % "1.1.3" % Test
+    val icd_catalogs          = "de.dnpm.dip"   %% "icd-claml-packaged"    % "1.1.3" % Test
+    val atc_impl              = "de.dnpm.dip"   %% "atc-impl"              % "1.1.1" % Test
+    val atc_catalogs          = "de.dnpm.dip"   %% "atc-catalogs-packaged" % "1.1.1" % Test
+    val hgnc_geneset          = "de.dnpm.dip"   %% "hgnc-gene-set-impl"    % "1.1.2" % Test
     val hpo                   = "de.dnpm.dip"   %% "hp-ontology"           % "1.2.0"
     val alpha_id_se           = "de.dnpm.dip"   %% "alpha-id-se"           % "1.2.0" % Test
     val orphanet              = "de.dnpm.dip"   %% "orphanet-ordo"         % "1.2.0" % Test
